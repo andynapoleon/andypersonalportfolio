@@ -870,7 +870,7 @@ h6 {
   outline: none;
   line-height: 40px;
   padding: 0 30px;
-  font-size: .8em;
+  font-size: 0.8em;
   text-align: center;
   text-decoration: none;
   font-weight: 500;
@@ -1396,7 +1396,7 @@ h6 {
   cursor: pointer;
 }
 
-.default-switch input+label {
+.default-switch input + label {
   position: absolute;
   top: 1px;
   left: 1px;
@@ -1412,7 +1412,7 @@ h6 {
   cursor: pointer;
 }
 
-.default-switch input:checked+label {
+.default-switch input:checked + label {
   left: 19px;
 }
 
@@ -1436,7 +1436,7 @@ h6 {
   opacity: 0;
 }
 
-.primary-switch input+label {
+.primary-switch input + label {
   position: absolute;
   left: 0;
   top: 0;
@@ -1446,7 +1446,7 @@ h6 {
   height: 100%;
 }
 
-.primary-switch input+label:before {
+.primary-switch input + label:before {
   me: "";
   position: absolute;
   left: 0;
@@ -1464,7 +1464,7 @@ h6 {
   transition: all 0.2s;
 }
 
-.primary-switch input+label:after {
+.primary-switch input + label:after {
   me: "";
   position: absolute;
   top: 1px;
@@ -1481,11 +1481,11 @@ h6 {
   cursor: pointer;
 }
 
-.primary-switch input:checked+label:after {
+.primary-switch input:checked + label:after {
   left: 19px;
 }
 
-.primary-switch input:checked+label:before {
+.primary-switch input:checked + label:before {
   background: #8490ff;
 }
 
@@ -1509,7 +1509,7 @@ h6 {
   opacity: 0;
 }
 
-.confirm-switch input+label {
+.confirm-switch input + label {
   position: absolute;
   left: 0;
   top: 0;
@@ -1519,7 +1519,7 @@ h6 {
   height: 100%;
 }
 
-.confirm-switch input+label:before {
+.confirm-switch input + label:before {
   me: "";
   position: absolute;
   left: 0;
@@ -1537,7 +1537,7 @@ h6 {
   cursor: pointer;
 }
 
-.confirm-switch input+label:after {
+.confirm-switch input + label:after {
   me: "";
   position: absolute;
   top: 1px;
@@ -1554,11 +1554,11 @@ h6 {
   cursor: pointer;
 }
 
-.confirm-switch input:checked+label:after {
+.confirm-switch input:checked + label:after {
   left: 19px;
 }
 
-.confirm-switch input:checked+label:before {
+.confirm-switch input:checked + label:before {
   background: #4cd3e3;
 }
 
@@ -1582,7 +1582,7 @@ h6 {
   opacity: 0;
 }
 
-.primary-checkbox input+label {
+.primary-checkbox input + label {
   position: absolute;
   left: 0;
   top: 0;
@@ -1595,8 +1595,9 @@ h6 {
   border: 1px solid #f1f1f1;
 }
 
-.primary-checkbox input:checked+label {
-  background: url(../img/elements/primary-check.png) no-repeat center center/cover;
+.primary-checkbox input:checked + label {
+  background: url(../img/elements/primary-check.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -1620,7 +1621,7 @@ h6 {
   opacity: 0;
 }
 
-.confirm-checkbox input+label {
+.confirm-checkbox input + label {
   position: absolute;
   left: 0;
   top: 0;
@@ -1633,8 +1634,9 @@ h6 {
   border: 1px solid #f1f1f1;
 }
 
-.confirm-checkbox input:checked+label {
-  background: url(../img/elements/success-check.png) no-repeat center center/cover;
+.confirm-checkbox input:checked + label {
+  background: url(../img/elements/success-check.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -1658,7 +1660,7 @@ h6 {
   opacity: 0;
 }
 
-.disabled-checkbox input+label {
+.disabled-checkbox input + label {
   position: absolute;
   left: 0;
   top: 0;
@@ -1676,8 +1678,9 @@ h6 {
   z-index: 3;
 }
 
-.disabled-checkbox input:checked+label {
-  background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
+.disabled-checkbox input:checked + label {
+  background: url(../img/elements/disabled-check.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -1701,7 +1704,7 @@ h6 {
   opacity: 0;
 }
 
-.primary-radio input+label {
+.primary-radio input + label {
   position: absolute;
   left: 0;
   top: 0;
@@ -1714,8 +1717,9 @@ h6 {
   border: 1px solid #f1f1f1;
 }
 
-.primary-radio input:checked+label {
-  background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
+.primary-radio input:checked + label {
+  background: url(../img/elements/primary-radio.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -1739,7 +1743,7 @@ h6 {
   opacity: 0;
 }
 
-.confirm-radio input+label {
+.confirm-radio input + label {
   position: absolute;
   left: 0;
   top: 0;
@@ -1752,8 +1756,9 @@ h6 {
   border: 1px solid #f1f1f1;
 }
 
-.confirm-radio input:checked+label {
-  background: url(../img/elements/success-radio.png) no-repeat center center/cover;
+.confirm-radio input:checked + label {
+  background: url(../img/elements/success-radio.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -1777,7 +1782,7 @@ h6 {
   opacity: 0;
 }
 
-.disabled-radio input+label {
+.disabled-radio input + label {
   position: absolute;
   left: 0;
   top: 0;
@@ -1795,8 +1800,9 @@ h6 {
   z-index: 3;
 }
 
-.disabled-radio input:checked+label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
+.disabled-radio input:checked + label {
+  background: url(../img/elements/disabled-radio.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -1942,7 +1948,6 @@ h6 {
     display: block !important;
   }
 
-
   .banner-area {
     padding-bottom: 30px !important;
   }
@@ -1967,7 +1972,6 @@ h6 {
 @media (max-width: 992px) {
   .navbar-nav {
     margin-top: 10px !important;
-    ;
   }
 
   .navbar-nav a {
@@ -2711,7 +2715,7 @@ h6 {
 }
 
 .white-bg {
-  background: #fff;
+  background: black;
 }
 
 .section-top-border {
@@ -2727,13 +2731,12 @@ h6 {
   margin: 0;
 }
 
-
 /* HERE'S SOME UGLY ASS CSS */
 .wrapper {
   padding: 0 20%;
   /* height: 100%; */
   width: 100%;
-  background-color: #F9F9FE;
+  background-color: #f9f9fe;
   color: #444;
   display: grid;
   text-align: center;
@@ -2746,9 +2749,7 @@ h6 {
     gap: 1%;
     padding-bottom: 1%;
   }
-
 }
-
 
 /* .wrapper_jobs {
   padding: 0 10%;
@@ -2776,7 +2777,6 @@ h6 {
 
 } */
 
-
 .box {
   text-align: center;
   vertical-align: center;
@@ -2788,7 +2788,6 @@ h6 {
   padding: 20px;
   font-size: 150%;
 }
-
 
 .box:hover {
   transform: scale(1.1);
@@ -2816,7 +2815,7 @@ h6 {
 .box-text-title {
   color: white;
   margin-bottom: 10%;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 #work {
@@ -2828,6 +2827,13 @@ h6 {
   margin-bottom: -200px;
 }
 
+.footer-link {
+  color: black;
+}
+
+.container-fluid {
+  padding: 0% 0%;
+}
 
 /* HERE'S SOME SUPER RESPONSIVE CSS LOL */
 
@@ -2865,7 +2871,6 @@ h6 {
   .my-img {
     margin-bottom: -40px;
   }
-
 }
 
 @media screen and (max-width: 850px) {
@@ -2875,24 +2880,20 @@ h6 {
 
   .my-img {
     margin-top: 0px;
-
   }
 
   #work {
     margin-top: 150px;
   }
-
 }
 
 @media screen and (max-width: 800px) {
   #work {
     /* margin-top: 350px; */
   }
-
 }
 
 @media screen and (max-width: 700px) {
-
   .my-img {
     transform: scale(1);
   }
