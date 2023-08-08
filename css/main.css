@@ -2637,9 +2637,92 @@ h6 {
   font-weight: 300;
 }
 
-.skills {
-  width: 400px;
-  height: 300px;
+/* SKills Section */
+#testimonials {
+  background-color: #ef8172;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+  text-align: center;
+  color: grey;
+}
+
+.testimonial-image {
+  width: 70%;
+  height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.language-image {
+  width: 30%;
+  height: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.style-image {
+  width: 70%;
+  height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.front-image {
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.inline-block {
+  display: inline-block;
+  max-width: 22.5%;
+}
+
+.language-inline-block {
+  display: inline-block;
+  max-width: 20%;
+  margin: auto;
+  width: 50%;
+}
+
+.style-inline-block {
+  display: inline-block;
+  max-width: 12.5%;
+  margin: auto;
+  width: 50%;
+}
+
+.front-inline-block {
+  display: inline-block;
+  max-width: 22.5%;
+  margin: auto;
+  width: 50%;
+}
+
+.back-inline-block {
+  display: inline-block;
+  max-width: 27.5%;
+  margin: auto;
+  width: 50%;
+}
+
+#banner {
+  display: block;
+  margin: auto;
+  width: 50%;
+  text-align: center;
 }
 
 @media (max-width: 991px) {
@@ -2867,6 +2950,14 @@ h6 {
 @media screen and (max-width: 1000px) {
   .projects_footer_size {
     height: 300px;
+  }
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
   }
 
   .my-img {
