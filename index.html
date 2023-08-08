@@ -46,7 +46,7 @@
             {
               name: "FlexVerse" /* <- write here the name of the card (example: for a job it could be "Amazon") */,
               image:
-                "img/gym.JPG" /* <- write the filepath to your card image (covered later in tutorial) or leave as "" if you don't have one */,
+                "img/wolf.png" /* <- write the filepath to your card image (covered later in tutorial) or leave as "" if you don't have one */,
               url: "" /* <- write the url you would like to link (or leave as "") */,
               description:
                 "A social media app for gym freaks. It's not an ordinary one." /*<- write here a description of the card */,
@@ -55,22 +55,58 @@
 
             /* 👇👇👇 These are all the same - change them similar to the one above */
             {
-              name: "",
-              image: "",
+              name: "Beast Inventory",
+              image: "img/storage.png",
               url: "",
-              description: "Coming soon ...",
-              sub_description: "",
+              description:
+                "An inventory management app for the fictional supplement brand BEAST.",
+              sub_description: "Coming soon ...",
             },
             {
-              name: "",
-              image: "",
+              name: "Bug Slayer",
+              image: "img/cat.png",
               url: "",
-              description: "Coming soon ...",
-              sub_description: "",
+              description:
+                "A bug tracker app that accelerates finding and slaying bugs at the speed of light.",
+              sub_description: "Coming soon ...",
+            },
+            {
+              name: "No Spotify Bro",
+              image: "img/music.png",
+              url: "",
+              description:
+                "An app that reads a Spotify playlist's songs and generate a YouTube playlist of those songs.",
+              sub_description: "Coming soon ...",
+            },
+            {
+              name: "CS Document Store",
+              image: "img/library.png",
+              url: "",
+              description:
+                "A NoSQL database app storing computing science papers.",
+              sub_description: "Coming soon ...",
             },
             /* 🔽 If you want to delete a card - just delete everything within curly braces (and the comma) so: "{...}," */
             /*👇 For example delete the things between the pointers here 👇  (not including these comments) */
             /* 👆 and here 👆 (you can do the same for others or add new cards by copy-pasting this) */
+          ],
+        },
+
+        /* ADD OR DELETE SECTIONS 🤘🤘🤘 - */
+        /* To add sections - just simply copy paste, but to To Remove sections- just simply delete */
+        /* what is in between these pointers 👇 (not including these comments) */
+        {
+          section_title: "Technical Skills",
+          emoji: "🎯",
+          section_description: "My most proficient technologies",
+          cards: [
+            {
+              name: "",
+              image: "img/react.jpg",
+              url: "",
+              description: "",
+              sub_description: "",
+            },
           ],
         },
 
@@ -82,35 +118,17 @@
           cards: [
             {
               name: "University of Alberta",
-              image: "",
+              image: "img/ta3.png",
               url: "",
               description: "Teaching Assistant",
-              sub_description: "",
+              sub_description:
+                "I was a teaching assistant for Dr.Lin's CMPUT 201 in Fall 2023",
             },
             {
               name: "University of Alberta",
-              image: "",
+              image: "img/software2.png",
               url: "",
               description: "Computer Science Academic Cohort Leader",
-              sub_description: "",
-            },
-          ],
-        },
-
-        /* ADD OR DELETE SECTIONS 🤘🤘🤘 - */
-        /* To add sections - just simply copy paste, but to To Remove sections- just simply delete */
-        /* what is in between these pointers 👇 (not including these comments) */
-        {
-          section_title: "Research",
-          emoji: "🔬",
-          section_description: "My on-going research",
-          cards: [
-            {
-              name: "Optimization and Decision-Making under Uncertainty",
-              image: "",
-              url: "",
-              description:
-                "Working on a research paper with a graduate student in the SODALab (Department of CS, University of Alberta)",
               sub_description: "",
             },
           ],
@@ -297,85 +315,112 @@
 
     <script>
       for (let i = 0; i < sections.length; i++) {
-        document.getElementById("content-sections").innerHTML += `
+        if (sections[i].section_title === "Technical Skills") {
+          document.getElementById("content-sections").innerHTML += `
+                      <section data-aos-easing="linear"
+                      data-aos-duration="1000"data-aos="fade-up" class="project-area section-gap " id="project-${i}" style="background:${
+            i % 2 == sections.length % 2 ? "#fff" : "#f9f9ff"
+          }; background-image: url('img/cubes.png')">
+                      <div class="container">
+                      <div class="row d-flex justify-content-center">
+                        <div class="menu-content pb-70 col-lg-12">
+                          <div class="title text-center">
+                            <h1 class="mb-10" style="margin-top:-40px;">${
+                              sections[i].emoji
+                            } ${sections[i].section_title}</h1>
+                            <p>${sections[i].section_description} </p>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="col-lg-12" style="margin-top:-40px;">
+                      <div id="project-wrapper-${i}" class=" wrapper" style="background:transparent;">
 
+                      </div>
+                      </div>
 
-			<section data-aos-easing="linear"
-    data-aos-duration="1000"data-aos="fade-up" class="project-area section-gap " id="project-${i}" style="background:${
-          i % 2 == sections.length % 2 ? "#fff" : "#f9f9ff"
-        }">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="menu-content pb-70 col-lg-12">
-					<div class="title text-center">
-						<h1 class="mb-10" style="margin-top:-40px;">${sections[i].emoji} ${
-          sections[i].section_title
-        }</h1>
-						<p>${sections[i].section_description} </p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-12" style="margin-top:-40px;">
-			<div id="project-wrapper-${i}" class=" wrapper" style="background:transparent;">
+                      </section>            
+      `;
+        } else {
+          document.getElementById("content-sections").innerHTML += `
+      			<section data-aos-easing="linear"
+          data-aos-duration="1000"data-aos="fade-up" class="project-area section-gap " id="project-${i}" style="background:${
+            i % 2 == sections.length % 2 ? "#fff" : "#f9f9ff"
+          }; background-image: url('img/cubes.png')">
+      		<div class="container">
+      			<div class="row d-flex justify-content-center">
+      				<div class="menu-content pb-70 col-lg-12">
+      					<div class="title text-center">
+      						<h1 class="mb-10" style="margin-top:-40px;">${sections[i].emoji} ${
+            sections[i].section_title
+          }</h1>
+      						<p>${sections[i].section_description} </p>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+      		<div class="col-lg-12" style="margin-top:-40px;">
+      			<div id="project-wrapper-${i}" class=" wrapper" style="background:transparent;">
 
-			</div>
-			</div>
+      			</div>
+      			</div>
 
-			</section>
-			`;
-
-        sections[i].cards.forEach((proj) => {
-          if (proj.sub_description) {
-            document.getElementById(
-              `project-wrapper-${i}`
-            ).innerHTML += `<a class="box project" href = ${
-              proj.url ? proj.url : "#"
-            }
-
-					${proj.url ? 'target="_blank" ' : null} style = "${
-              proj.image ? "background-image: url(" + proj.image + ");" : ""
-            } border: 1px solid #DCDCDC;
-					background - color: white; background-size: cover; background-repeat: no-repeat; background-position: center center; ">
-						<div class="box-text" > <h3 class="box-text-title" style="margin-bottom: 5%; font-size: 20px;">${
-              proj.name
-            }
-							${
-                proj.url
-                  ? '<img src="img/link-white.png" style="margin-left: 5px;width:20px; height:20px" />'
-                  : ""
+      			</section>
+      			`;
+          sections[i].cards.forEach((proj) => {
+            if (proj.sub_description) {
+              document.getElementById(
+                `project-wrapper-${i}`
+              ).innerHTML += `<a class="box project" href = ${
+                proj.url ? proj.url : "#"
               }
-							</h3> ${proj.description}
 
-					<div style="color:white; margin-top: 10%; font-size:${
-            proj.sub_description.length > 40 ? "10px" : "14px"
-          };">${proj.sub_description}
+      					${proj.url ? 'target="_blank" ' : null} style = "${
+                proj.image ? "background-image: url(" + proj.image + ");" : ""
+              } border: 1px solid #DCDCDC;
+      					background - color: white; background-size: cover; background-repeat: no-repeat; background-position: center center; ">
+      						<div class="box-text" > <h3 class="box-text-title" style="margin-bottom: 5%; font-size: 20px;">${
+                    proj.name
+                  }
+      							${
+                      proj.url
+                        ? '<img src="img/link-white.png" style="margin-left: 5px;width:20px; height:20px" />'
+                        : ""
+                    }
+      							</h3> ${proj.description}
 
-					</div> </div > </a > `;
-          } else {
-            document.getElementById(
-              `project-wrapper-${i}`
-            ).innerHTML += `<a class="box a"href = ${proj.url ? proj.url : "#"}
+      					<div style="color:white; margin-top: 10%; font-size:${
+                  proj.sub_description.length > 40 ? "10px" : "14px"
+                };">${proj.sub_description}
 
-					${proj.url ? 'target="_blank" ' : null} style = "${
-              proj.image ? "background-image: url(" + proj.image + ");" : ""
-            } border: 1px solid #DCDCDC;
-					background-size: cover; background-repeat: no-repeat; background-position: center center; ">
-						<div class="box-text" > <h3 class="box-text-title" style="font-size: 20px;">${
-              proj.name
+      					</div> </div > </a > `;
+            } else {
+              document.getElementById(
+                `project-wrapper-${i}`
+              ).innerHTML += `<a class="box a"href = ${
+                proj.url ? proj.url : "#"
+              }
+
+      					${proj.url ? 'target="_blank" ' : null} style = "${
+                proj.image ? "background-image: url(" + proj.image + ");" : ""
+              } border: 1px solid #DCDCDC;
+      					background-size: cover; background-repeat: no-repeat; background-position: center center; ">
+      						<div class="box-text" > <h3 class="box-text-title" style="font-size: 20px;">${
+                    proj.name
+                  }
+
+
+      						${
+                    proj.url
+                      ? '<img src="img/link-white.png"style="margin-left: 5px;width:25px; height:25px" />'
+                      : ""
+                  }
+      							</h3> ${proj.description}
+
+      					</div >`;
             }
-
-
-						${
-              proj.url
-                ? '<img src="img/link-white.png"style="margin-left: 5px;width:25px; height:25px" />'
-                : ""
-            }
-							</h3> ${proj.description}
-
-					</div >`;
-          }
-        });
+          });
+        }
       }
     </script>
     <!-- End Project Area -->

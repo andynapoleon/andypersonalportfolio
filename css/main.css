@@ -2637,6 +2637,11 @@ h6 {
   font-weight: 300;
 }
 
+.skills {
+  width: 400px;
+  height: 300px;
+}
+
 @media (max-width: 991px) {
   .single-footer-widget {
     margin-bottom: 30px;
