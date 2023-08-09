@@ -2643,7 +2643,7 @@ h6 {
 }
 
 .testimonial-text {
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.5;
   text-align: center;
   color: grey;
@@ -2945,6 +2945,31 @@ h6 {
   #work {
     margin-top: 0px;
   }
+
+  .inline-block {
+    display: inline-block;
+    max-width: 35%;
+  }
+
+  .language-inline-block {
+    display: inline-block;
+    max-width: 35%;
+  }
+
+  .style-inline-block {
+    display: inline-block;
+    max-width: 20%;
+  }
+
+  .front-inline-block {
+    display: inline-block;
+    max-width: 35%;
+  }
+
+  .back-inline-block {
+    display: inline-block;
+    max-width: 47.5%;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -2985,7 +3010,7 @@ h6 {
 
 @media screen and (max-width: 800px) {
   #work {
-    /* margin-top: 350px; */
+    margin-top: 350px;
   }
 }
 
