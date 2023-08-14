@@ -39,8 +39,9 @@
             "Recent Projects" /* <- write here the first section title of your website (example: "Work experience", "projects"...) */,
           emoji:
             "💻" /* <- write here an optional emoji (will go next to the section_title) */,
-          section_description:
-            "👉 Click 👈 the cards below 👇 to learn more" /* <- write here an optional sub-description of the section (example: "here's some work I've done..") */,
+          section_description: "👉 Click 👈 the cards below 👇 to learn more.",
+          section_warning:
+            "For some projects, the server might need some time to load up, therefore, after clicking the Login button, it might take around 30s to take you to the app.",
           /* Below are the "cards" - these are the small square info cards for each section */
           cards: [
             {
@@ -104,6 +105,7 @@
           section_title: "Technical Skills",
           emoji: "🎯",
           section_description: "My most proficient technologies",
+          section_warning: "",
           cards: [
             {
               name: "",
@@ -120,6 +122,7 @@
           section_title: "Work Experience",
           emoji: "💼",
           section_description: "Where I've worked",
+          section_warning: "",
           cards: [
             {
               name: "University of Alberta",
@@ -127,7 +130,7 @@
               url: "",
               description: "Teaching Assistant",
               sub_description:
-                "I was a teaching assistant for Dr.Lin's CMPUT 201 in Fall 2023. Duties included grading labs and exam papers, preparing review materials for labs (in C), and helping students in their lab sessions.",
+                "I was a teaching assistant for Dr.Lin's CMPUT 201 in Fall 2023. Duties included grading lab assignments, preparing review materials for labs (in C), and helping students in their lab sessions.",
             },
             {
               name: "University of Alberta",
@@ -135,7 +138,7 @@
               url: "",
               description: "Computer Science Academic Cohort Leader",
               sub_description:
-                "I was the Cohort Leader for the Computer Science Cohort at the UofA. I helped students overcome and embrace academic challenges through organizing activities such as exam review sessions and coding contests.",
+                "I was the Cohort Leader for the Computer Science Cohort at the UofA. I helped students overcome and embrace academic challenges by organizing activities such as exam review sessions and coding contests.",
             },
           ],
         },
@@ -513,6 +516,7 @@
             sections[i].section_title
           }</h1>
       						<p>${sections[i].section_description} </p>
+                  <p>${sections[i].section_warning} </p>
       					</div>
       				</div>
       			</div>
