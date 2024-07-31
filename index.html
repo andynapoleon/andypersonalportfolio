@@ -15,12 +15,12 @@
         last_name: "Tran" /* <- write your last name here */,
         position: "Software Enthusiast" /* <- write your title here */,
         email: "anhquoctran006@gmail.com" /* <- write your email here */,
-        allow_download_resume: true /* <- write "false" if you want them to email you to ask for your resume or "true" if you want them to download your resume */,
+        allow_download_resume: false /* <- write "false" if you want them to email you to ask for your resume or "true" if you want them to download your resume */,
         resume_path:
           "andy-resume.pdf" /* if you wrote "true" above in "allow_download_resume", write here the filename of your resume */,
         phone: "+1 5879206558" /* <- write your phone number here */,
         main_pic:
-          "img/andy-logo.png" /* <- write the filepath to your header image here (shown later in tutorial) */,
+          "img/andy-nouvel.png" /* <- write the filepath to your header image here (shown later in tutorial) */,
         contact_pic:
           "img/andy.jpg" /* <- write the filepath to your contact section image here (shown later in tutorial) */,
         logo_pic: "" /* <- This you don't need anymore! */,
@@ -40,38 +40,34 @@
           emoji:
             "💻" /* <- write here an optional emoji (will go next to the section_title) */,
           section_description: "👉 Click 👈 the cards below 👇 to learn more.",
-          section_warning:
-            "For some projects, the server might need some time to load up. Therefore, after clicking the Login/Register button, it might take around 30s to direct you to the app (or back to the login page after you register).",
           /* Below are the "cards" - these are the small square info cards for each section */
           cards: [
             {
-              name: "Four-Coloured Map Theorem Solver",
-              image: "img/map.png",
-              url: "https://map-coloring.vercel.app",
+              name: "Rust Monkey Lang Intepreter" /* <- write here the name of the card (example: for a job it could be "Amazon") */,
+              image:
+                "img/ferris.jpeg" /* <- write the filepath to your card image (covered later in tutorial) or leave as "" if you don't have one */,
+              url: "https://github.com/andynapoleon/RustMonkeyLangInterpreter" /* <- write the url you would like to link (or leave as "") */,
               description:
-                "A solver application for the famous Four-Colour Map Theorem. Built collaboratively during DevelopEd 2.0 by Dev Edmonton Society.",
-              sub_description: "Next.js, Flask, skimage, clingo, MongoDB",
+                " 🦀 An interpreter built in Rust, made for the Monkey Programming Language 🐒 in the famous book 'Writing An Interpreter In Go' by Thorsten Ball 📘." /*<- write here a description of the card */,
+              sub_description: "Rust, Cargo",
             },
             {
-              name: "FlexVerse" /* <- write here the name of the card (example: for a job it could be "Amazon") */,
-              image:
-                "img/wolf.png" /* <- write the filepath to your card image (covered later in tutorial) or leave as "" if you don't have one */,
-              url: "https://flex-verse-social-media.vercel.app" /* <- write the url you would like to link (or leave as "") */,
+              name: "Four-Colour Map Theorem Solver",
+              image: "img/map_color.png",
+              url: "https://four-colour-theorem-solver.vercel.app",
               description:
-                "A social media app for gym freaks. It's not an ordinary one." /*<- write here a description of the card */,
-              sub_description:
-                "React.js, Redux.js, Material UI, Node.js, Express.js, MongoDB, Mongoose",
+                " 🧮 A solver application for the famous Four-Colour Map Theorem. 🗺️ Initially built collaboratively during DevelopEd 2.0 Hackathon (2023) 🏆 and later further developed 🚀.",
+              sub_description: "Next.js, Golang, Flask (Python), PostgreSQL",
             },
 
             /* 👇👇👇 These are all the same - change them similar to the one above */
             {
-              name: "Beast Inventory Manager",
-              image: "img/storage.png",
-              url: "https://inventory-management-app-olive.vercel.app",
+              name: "NexaPulse Social Networking",
+              image: "img/nexapulse.jpeg",
+              url: "https://nexapulse1-7fbca99d2d7b.herokuapp.com",
               description:
-                "An inventory management app for the fictional supplement brand BEAST.",
-              sub_description:
-                "React.js, Redux.js, Material UI, NIVO, Node.js, Express.js, MongoDB, Mongoose",
+                " 🌐 A Distributed Social Networking Application for better connection with the world! 🤝 Built in CMPUT 404 - Web Applications and Architecture 🏛️.",
+              sub_description: "Svelte, Django, Heroku",
             },
             // {
             //   name: "SpotiTube",
@@ -103,7 +99,6 @@
           section_title: "Technical Skills",
           emoji: "🎯",
           section_description: "My most proficient technologies",
-          section_warning: "",
           cards: [
             {
               name: "",
@@ -120,7 +115,6 @@
           section_title: "Work Experience",
           emoji: "💼",
           section_description: "Where I've worked",
-          section_warning: "",
           cards: [
             {
               name: "University of Alberta",
@@ -514,7 +508,6 @@
             sections[i].section_title
           }</h1>
       						<p>${sections[i].section_description} </p>
-                  <p>${sections[i].section_warning} </p>
       					</div>
       				</div>
       			</div>
