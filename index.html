@@ -13,7 +13,7 @@
       let content = {
         first_name: "Andy" /* <- write your first name here */,
         last_name: "Tran" /* <- write your last name here */,
-        position: "Software Enthusiast" /* <- write your title here */,
+        position: "Software Developer" /* <- write your title here */,
         email: "anhquoctran006@gmail.com" /* <- write your email here */,
         allow_download_resume: false /* <- write "false" if you want them to email you to ask for your resume or "true" if you want them to download your resume */,
         resume_path:
@@ -28,18 +28,42 @@
           "👨🏻‍💻🤖🏋🏻‍♂️" /* write here some emojis that will go in the header */,
         /* write below a short description of you that will go in the bottom of the website */
         aboutMe:
-          'I am currently a third-year Computing Science (Honors) student at the University of Alberta. I have a strong passion for both academic and industrial computing science skills, in each of which I find a unique beauty lying. I am an aspiring full-stack software engineer, and my ultimate hobby outside CS is bodybuilding. My motto is "Live a life you will remember!"."',
+          'I am currently a fourth-year Computing Science (Honors) student at the University of Alberta. I have a strong passion for both academic and industrial computing science skills, in each of which I find a unique beauty lying. I am an aspiring full-stack software engineer, and my ultimate hobby outside CS is weightlifting. My motto is "Live a life you will remember!".',
       };
 
       /* These are the sections you want in your resume 💼 (add or delete any) */
       let sections = [
         /* NEW SECTION */
         {
+          section_title: "Work Experience",
+          emoji: "💼",
+          section_description: "Where I've worked",
+          cards: [
+            {
+              name: "Ovintiv",
+              image: "img/ovintiv-gas.png",
+              url: "https://www.ovintiv.com/",
+              description: "Student IT Solutions Analyst",
+              sub_description:
+                "Assisted in constructing an advanced AI search model for the IT Knowledge Base utilizing Azure Cognitive Search. Developed an efficient data pipeline with FastAPI to automate the synchronization of knowledge articles between ServiceNow and Azure Blob Storage, reducing manual effort by 95%. Streamlined over 20 workflows in ServiceNow, saving more than 100 hours of manual work per month.",
+            },
+            {
+              name: "University of Alberta",
+              image: "img/software2.png",
+              url: "https://www.ualberta.ca/computing-science/index.html",
+              description: "Teaching Assistant",
+              sub_description:
+                "Helped more than 1000 students in two courses with understanding complex algorithms and C programming concepts during office hours and lab sessions. Graded assignments and exams, providing detailed feedback to help students improve coding skills and algorithmic thinking. Collaborated with the course instructor to develop teaching materials, enhancing overall course effectiveness.",
+            },
+          ],
+        },
+        /* NEW SECTION */
+        {
           section_title:
             "Recent Projects" /* <- write here the first section title of your website (example: "Work experience", "projects"...) */,
           emoji:
             "💻" /* <- write here an optional emoji (will go next to the section_title) */,
-          section_description: "👉 Click 👈 the cards below 👇 to learn more.",
+          section_description: "What I've loved to build",
           /* Below are the "cards" - these are the small square info cards for each section */
           cards: [
             {
@@ -54,20 +78,20 @@
             {
               name: "Four-Colour Map Theorem Solver",
               image: "img/map_color.png",
-              url: "https://four-colour-theorem-solver.vercel.app",
+              url: "https://github.com/andynapoleon/FourColourTheoremSolver",
               description:
                 " 🧮 A solver application for the famous Four-Colour Map Theorem. 🗺️ Initially built collaboratively during DevelopEd 2.0 Hackathon (2023) 🏆 and later further developed 🚀.",
-              sub_description: "Next.js, Golang, Flask (Python), PostgreSQL",
+              sub_description: "Next.js, Golang, Flask, PostgreSQL",
             },
 
             /* 👇👇👇 These are all the same - change them similar to the one above */
             {
               name: "NexaPulse Social Networking",
               image: "img/nexapulse.jpeg",
-              url: "https://nexapulse1-7fbca99d2d7b.herokuapp.com",
+              url: "https://github.com/andynapoleon/NexaPulseSocialNetworking",
               description:
                 " 🌐 A Distributed Social Networking Application for better connection with the world! 🤝 Built in CMPUT 404 - Web Applications and Architecture 🏛️.",
-              sub_description: "Svelte, Django, Heroku",
+              sub_description: "Svelte, Django, PostgreSQL, Heroku",
             },
             // {
             //   name: "SpotiTube",
@@ -106,31 +130,6 @@
               url: "",
               description: "",
               sub_description: "",
-            },
-          ],
-        },
-
-        /* NEW SECTION */
-        {
-          section_title: "Work Experience",
-          emoji: "💼",
-          section_description: "Where I've worked",
-          cards: [
-            {
-              name: "University of Alberta",
-              image: "img/ta.png",
-              url: "",
-              description: "Teaching Assistant",
-              sub_description:
-                "I am currently a teaching assistant for Dr.Lin's CMPUT 201 in Fall 2023. Duties included grading lab assignments, preparing review materials for labs (in C), and helping students in their lab sessions.",
-            },
-            {
-              name: "University of Alberta",
-              image: "img/software2.png",
-              url: "",
-              description: "Computer Science Academic Cohort Leader",
-              sub_description:
-                "I was the Cohort Leader for the Computer Science Cohort at the UofA in 2022-2023. I helped students overcome and embrace academic challenges by organizing activities such as exam review sessions and coding contests.",
             },
           ],
         },
@@ -293,7 +292,6 @@
 							<h1 class="text-white">
 								Hi, I’m <br> <span> ${full_name}</span>
 								<br>
-								<a class="footer-link" href="https://twitter.com/AndyTran006"><i class="fab fa-twitter"></i></a>
 								<a class="footer-link" href="https://www.linkedin.com/in/andytrannapoleon/"><i class="fab fa-linkedin"></i></a>
 								<a class="footer-link" href="https://github.com/andynapoleon"><i class="fab fa-github"></i></a>
 								<br> ${content.position} <br> ${content.banner_emojis} <br> 
@@ -343,51 +341,27 @@
       <div class="carousel-inner">
 
         <div class="carousel-item active container-fluid" style="text-align: center">
-          <h5 class="testimonial-text">The MERN Stack</h5>
+          <h5 class="testimonial-text">Programming Languages</h5>
           <div id="banner">
-            <div class="inline-block">
-              <img class="testimonial-image" src="img/mongo.png" alt="react-logo">
+            <div class="back-inline-block">
+              <img class="language-image" src="img/python.png" alt="react-logo">
             </div>
-            <div class="inline-block">
-              <img class="testimonial-image" src="img/express.png" alt="react-logo">
+            <div class="back-inline-block">
+              <img class="language-image" src="img/rust-logo.png" alt="react-logo">
             </div>
-            <div class="inline-block">
-              <img class="testimonial-image" src="img/react.png" alt="react-logo">
+            <div class="back-inline-block">
+              <img class="language-image" src="img/go-logo.png" alt="react-logo">
             </div>
-            <div class="inline-block">
-              <img class="testimonial-image" src="img/node.png" alt="react-logo">  
+            <div class="back-inline-block">
+              <img class="language-image" src="img/javascript.png" alt="react-logo">  
+            </div>
+            <div class="back-inline-block">
+              <img class="language-image" src="img/c.png" alt="react-logo">
+            </div>
+            <div class="back-inline-block">
+              <img class="language-image" src="img/c++.png" alt="react-logo">
             </div>
           </div>
-        </div>
-
-        <div class="carousel-item container-fluid" style="text-align: center">
-            <h5 class="testimonial-text">Programming Languages</h5>
-            <div id="banner">
-              <div class="language-inline-block">
-                <img class="language-image" src="img/python.png" alt="react-logo">
-              </div>
-              <div class="language-inline-block">
-                <img class="language-image" src="img/c.png" alt="react-logo">
-              </div>
-              <div class="language-inline-block">
-                <img class="language-image" src="img/c++.png" alt="react-logo">
-              </div>
-              <div class="language-inline-block">
-                <img class="language-image" src="img/java.png" alt="react-logo">  
-              </div>
-              <div class="language-inline-block">
-                <img class="language-image" src="img/html.png" alt="react-logo">  
-              </div>
-              <div class="language-inline-block">
-                <img class="language-image" src="img/css.svg" alt="react-logo">  
-              </div>
-              <div class="language-inline-block">
-                <img class="language-image" src="img/javascript.png" alt="react-logo">  
-              </div>
-              <div class="language-inline-block">
-                <img class="language-image" src="img/typescript.png" alt="react-logo">  
-              </div>
-            </div>
         </div>
 
         <div class="carousel-item container-fluid" style="text-align: center">
@@ -400,37 +374,10 @@
                 <img class="front-image" src="img/react.png" alt="react-logo">
               </div>
               <div class="front-inline-block">
-                <img class="front-image" src="img/redux.png" alt="react-logo">
+                <img class="front-image" src="img/svelte.svg" alt="react-logo">
               </div>
               <div class="front-inline-block">
-                <img class="front-image" src="img/redux-toolkit.png" alt="react-logo">
-              </div>
-              <div class="front-inline-block">
-                <img class="front-image" src="img/query.png" alt="react-logo">
-              </div>
-              <div class="front-inline-block">
-                <img class="front-image" src="img/vite.png" alt="react-logo">
-              </div>
-              <div class="front-inline-block">
-                <img class="front-image" src="img/jquery.png" alt="react-logo">
-              </div>
-              <div class="front-inline-block">
-                <img class="front-image" src="img/sass.png" alt="react-logo">
-              </div>
-            </div>
-        </div>
-
-        <div class="carousel-item container-fluid" style="text-align: center">
-            <h5 class="testimonial-text">Styling Frameworks</h5>
-            <div id="banner">
-              <div class="style-inline-block">
-                <img class="style-image" src="img/material.png" alt="react-logo">
-              </div>
-              <div class="style-inline-block">
-                <img class="style-image" src="img/tailwind.png" alt="react-logo">
-              </div>
-              <div class="style-inline-block">
-                <img class="style-image" src="img/bootstrap.png" alt="react-logo">
+                <img class="front-image" src="img/tailwind.png" alt="react-logo">
               </div>
             </div>
         </div>
@@ -439,46 +386,40 @@
             <h5 class="testimonial-text">Back-End</h5>
             <div id="banner">
               <div class="back-inline-block">
-                <img class="front-image" src="img/node.png" alt="react-logo">
+                <img class="front-image" src="img/django.png" alt="react-logo">
               </div>
               <div class="back-inline-block">
-                <img class="front-image" src="img/express.png" alt="react-logo">
+                <img class="front-image" src="img/flask.png" alt="react-logo">
               </div>
               <div class="back-inline-block">
-                <img class="front-image" src="img/mongo.png" alt="react-logo">
+                <img class="front-image" src="img/FastAPI_logo.png" alt="react-logo">
               </div>
               <div class="back-inline-block">
-                <img class="front-image" src="img/mongoose.png" alt="react-logo">
+                <img class="front-image" src="img/postgresql.png" alt="react-logo">
               </div>
               <div class="back-inline-block">
-                <img class="front-image" src="img/firebase.png" alt="react-logo">
+                <img class="front-image" src="img/mongodb.png" alt="react-logo">
               </div>
               <div class="back-inline-block">
-                <img class="front-image" src="img/sqlite.png" alt="react-logo">
+                <img class="front-image" src="img/gohttp.png" alt="react-logo">
               </div>
             </div>
         </div>
 
         <div class="carousel-item container-fluid" style="text-align: center">
-            <h5 class="testimonial-text">Others</h5>
+            <h5 class="testimonial-text">Other Tools</h5>
             <div id="banner">
-              <div class="back-inline-block">
+              <div class="front-inline-block">
                 <img class="language-image" src="img/git.png" alt="react-logo">
               </div>
-              <div class="back-inline-block">
+              <div class="front-inline-block">
                 <img class="language-image" src="img/github.png" alt="react-logo">
               </div>
-              <div class="back-inline-block">
-                <img class="language-image" src="img/tkinter.png" alt="react-logo">
+              <div class="front-inline-block">
+                <img class="front-image" src="img/docker.png" alt="react-logo">
               </div>
-              <div class="back-inline-block">
-                <img class="language-image" src="img/pygame.png" alt="react-logo">
-              </div>
-              <div class="back-inline-block">
-                <img class="language-image" src="img/risc-v.png" alt="react-logo">
-              </div>
-              <div class="back-inline-block">
-                <img class="language-image" src="img/julia.png" alt="react-logo">
+              <div class="front-inline-block">
+                <img class="language-image" src="img/postman.svg" alt="react-logo">
               </div>
             </div>
         </div>
